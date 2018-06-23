@@ -4,22 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#a21ba8e4">
 
     <LinearLayout
-        android:layout_weight="0.5"
+        android:layout_weight="1"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-   <Button
+
+   <com.shivam.multitouch.TouchableFrameLayout
        android:layout_weight="1"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:id="@+id/button1"
        android:background="@drawable/uparrow"/>
 
-    <Button
+    <com.shivam.multitouch.TouchableFrameLayout
         android:layout_weight="1"
         android:layout_gravity="right"
         android:layout_width="match_parent"
@@ -30,19 +32,31 @@
     </LinearLayout>
 
     <FrameLayout
-        android:layout_weight="2"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <TextView
+            android:background="#e21ba8e4"
+            android:text="BLUETOOTH CAR"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
        <ListView
-           android:layout_width="match_parent"
+           android:background="#fff"
+           android:visibility="gone"
+           android:layout_width="wrap_content"
            android:layout_height="match_parent"
            android:id="@+id/listview"
-           android:layout_marginBottom="50dp">
+           android:layout_marginBottom="50dp"
+           android:layout_marginTop="50dp">
 
        </ListView>
         <Button
+            android:id="@+id/listpairbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center|bottom"
@@ -51,12 +65,12 @@
     </FrameLayout>
 
     <LinearLayout
-        android:layout_weight="0.5"
+        android:layout_weight="1"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-    <Button
+    <com.shivam.multitouch.TouchableFrameLayout
         android:layout_weight="1"
         android:layout_gravity="bottom"
         android:layout_width="match_parent"
@@ -64,13 +78,13 @@
         android:id="@+id/button3"
         android:background="@drawable/uparrow"/>
 
-    <Button
+    <com.shivam.multitouch.TouchableFrameLayout
         android:layout_weight="1"
         android:layout_gravity="bottom|right"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button4"
-        android:background="@drawable/uparrow"/>
+        android:background="@drawable/downarrow"/>
 
     </LinearLayout>
 
